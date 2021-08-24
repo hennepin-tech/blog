@@ -1,0 +1,76 @@
+@use 'global';
+
+nav {
+  & > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    li {
+      position: relative;
+    }
+
+    button {
+      color: global.$grey;
+      font-family: global.$navFamily;
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 .6rem;
+      background: transparent;
+      border: none;
+      white-space: nowrap;
+      &:hover {
+        cursor: pointer;
+      }
+      &.open:after {
+        content: '';
+        position: absolute;
+        left: calc(50% - 1rem);
+        bottom: -16px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #fff;
+        clear: both;
+        z-index: 9999;
+      }
+    }
+  }
+
+
+  ul[role='menu'] {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    list-style: none;
+    background-color: rgba(70, 70, 70, 0.93);
+    margin: .5rem 1.2rem 1.2rem 0;
+    padding: 0;
+    min-width: 240px;
+
+    li {
+      margin: 0;
+      
+      &:hover {
+        background-color: #2d2d2d;
+      }
+      
+      a{
+        padding: .7rem;
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        color: global.$white;
+        font-family: global.$navFamily;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  ul[role='menu'].visible {
+    visibility: visible;
+  }
+}
