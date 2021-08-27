@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: #E7E9EB;
+    font-family: 'Arial', sans-serif;
+    color: #464646;
+}
+
+p{
+    font-size: 2rem;
+}
+
+a {
+    color: #006ba7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header, footer {
+    display: none;
+}

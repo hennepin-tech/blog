@@ -3,6 +3,8 @@ import React, { useState, useEffect} from 'react'
 import Header from './header/Header'
 import Footer from './footer/Footer'
 
+import '../styles/reset.css'
+
 const Layout = ({ children }) => {
 
   const [height, setHeight] = useState(127)
@@ -25,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <main style={{
-        marginTop: '127px' || height
+        // marginTop: '127px' || height
       }}>
         { children }
       </main>
