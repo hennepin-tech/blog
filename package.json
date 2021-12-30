@@ -12,6 +12,7 @@
     "@hennepin-tech/htc-svelte": "0.0.6",
     "@portabletext/svelte": "^0.2.0",
     "@sanity/client": "^2.22.3",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.37",
     "@sveltejs/kit": "^1.0.0-next.201",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
