@@ -1,5 +1,4 @@
 <script>
-  import { urlFor } from '$lib/sanityClient'
   import Button from '@hennepin-tech/htc-svelte/Button.svelte'
   import SanityImage from '$lib/SanityImage.svelte'
   export let props
@@ -44,6 +43,7 @@
       image={props.mainImage.image}
       alt={props.mainImage.alt}
       maxWidth={780}
+      hero={true}
     />
   </div>
 </section>
