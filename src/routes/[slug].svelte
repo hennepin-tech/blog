@@ -2,8 +2,8 @@
   /**
    * @type {import('@sveltejs/kit').Load}
    */
-  export async function load({ page, fetch, session, context }) {
-    const { slug } = page.params
+  export async function load({ url, params, fetch, session, context }) {
+    const { slug } = params
     const res = await fetch(`/${slug}.json`);
   
   if (res.ok) {
@@ -34,8 +34,6 @@
   let post
 
   $: ({ post } = singlePost)
-
-  $: console.log(post)
 </script>
  
 <Seo
